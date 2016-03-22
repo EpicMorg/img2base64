@@ -44,9 +44,9 @@ namespace Img2Base64
         {
             if (imgOpen.ShowDialog() != DialogResult.OK) return;
             var path = imgOpen.FileName;
-            _fType = Path.GetExtension(imgOpen.FileName);
+            var extension = Path.GetExtension(imgOpen.FileName);
+            if (extension != null) _fType = extension.ToLower();
             picPreview.LoadAsync(path);
-            
         }
 
         private void Convert2Base64()
@@ -56,6 +56,31 @@ namespace Img2Base64
                 var tmpText = File.ReadAllBytes(picPreview.ImageLocation);
                 var base64 = Convert.ToBase64String(tmpText);
                 txtBase64raw.Text = base64;
+                //data:image/gif;base64,<...>
+                //data:image/jpeg;base64,<...>
+                //data:image/png;base64,<...>
+                //<img src="data:image/TYPE;base64,<...>" >
+                switch (_fType)
+                {
+                    case ".gif":
+                        txtBase64prefix.Text = "data:image/gif;base64," + base64;
+                        txtBase64html5.Text = "<img src=\"data:image/gif;base64," + base64 + "\">";
+                        break;
+                    case ".png":
+                        txtBase64prefix.Text = "data:image/png;base64," + base64;
+                        txtBase64html5.Text = "<img src=\"data:image/png;base64," + base64 + "\">";
+                        break;
+                    case ".jpg":
+                        txtBase64prefix.Text = "data:image/jpeg;base64," + base64;
+                        txtBase64html5.Text = "<img src=\"data:image/jpeg;base64," + base64 + "\">";
+                        break;
+                    case ".jpeg":
+                        txtBase64prefix.Text = "data:image/jpeg;base64," + base64;
+                        txtBase64html5.Text = "<img src=\"data:image/jpeg;base64," + base64 + "\">";
+                        break;
+                }
+            
+              
             }
             catch
             {
@@ -63,16 +88,12 @@ namespace Img2Base64
             }
             
         }
-       
-
         private void picPreview_LoadCompleted(object sender, AsyncCompletedEventArgs e)
         {
             Convert2Base64();
+            
+            
         }
-        //data:image/gif;base64,<...>
-        //data:image/jpeg;base64,<...>
-        //data:image/png;base64,<...>
-        //<img src="data:image/TYPE;base64,<...>" >
         private void btnCopy_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtBase64raw.Text) || !string.IsNullOrEmpty(txtBase64raw.Text))
