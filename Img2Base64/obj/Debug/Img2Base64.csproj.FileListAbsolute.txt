@@ -1,0 +1,9 @@
+D:\Git\int\Img2Base64\Img2Base64\bin\Debug\Img2Base64.exe.config
+D:\Git\int\Img2Base64\Img2Base64\bin\Debug\Img2Base64.exe
+D:\Git\int\Img2Base64\Img2Base64\bin\Debug\Img2Base64.pdb
+D:\Git\int\Img2Base64\Img2Base64\obj\Debug\Img2Base64.csprojResolveAssemblyReference.cache
+D:\Git\int\Img2Base64\Img2Base64\obj\Debug\Img2Base64.Properties.Resources.resources
+D:\Git\int\Img2Base64\Img2Base64\obj\Debug\Img2Base64.csproj.GenerateResource.Cache
+D:\Git\int\Img2Base64\Img2Base64\obj\Debug\Img2Base64.exe
+D:\Git\int\Img2Base64\Img2Base64\obj\Debug\Img2Base64.pdb
+D:\Git\int\Img2Base64\Img2Base64\obj\Debug\Img2Base64.frmMain.resources
