@@ -59,5 +59,24 @@ namespace Img2Base64.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap favicon_002 {
+            get {
+                object obj = ResourceManager.GetObject("favicon_002", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &quot;&gt;.
+        /// </summary>
+        internal static string tag_closed {
+            get {
+                return ResourceManager.GetString("tag_closed", resourceCulture);
+            }
+        }
     }
 }
