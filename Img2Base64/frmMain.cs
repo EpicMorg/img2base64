@@ -18,7 +18,7 @@ namespace Img2Base64
             InitializeComponent();
         }
 
-        string _fType = null;
+        public string _fType;
 
         private void btnLoad_Click(object sender, EventArgs e)
         { 
@@ -44,7 +44,9 @@ namespace Img2Base64
         {
             if (imgOpen.ShowDialog() != DialogResult.OK) return;
             var path = imgOpen.FileName;
+            _fType = Path.GetExtension(imgOpen.FileName);
             picPreview.LoadAsync(path);
+            
         }
 
         private void Convert2Base64()
@@ -82,12 +84,19 @@ namespace Img2Base64
 
         private void btnCopyPrefix_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrWhiteSpace(txtBase64prefix.Text) || !string.IsNullOrEmpty(txtBase64prefix.Text))
+            {
+                Clipboard.SetText(txtBase64prefix.Text);
+            }
 
         }
 
-        private void txtBase64raw_TextChanged(object sender, EventArgs e)
+        private void btnCopyHtml5_Click(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrWhiteSpace(txtBase64html5.Text) || !string.IsNullOrEmpty(txtBase64html5.Text))
+            {
+                Clipboard.SetText(txtBase64html5.Text);
+            }
         }
     }
 }

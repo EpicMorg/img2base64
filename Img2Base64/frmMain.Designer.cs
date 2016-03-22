@@ -32,6 +32,7 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.imgOpen = new System.Windows.Forms.OpenFileDialog();
             this.groupboxBase64 = new System.Windows.Forms.GroupBox();
+            this.txtBase64raw = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBase64html5 = new System.Windows.Forms.TextBox();
@@ -43,7 +44,6 @@
             this.rbFile = new System.Windows.Forms.RadioButton();
             this.rbUrl = new System.Windows.Forms.RadioButton();
             this.txtUrl = new System.Windows.Forms.TextBox();
-            this.txtBase64raw = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picPreview)).BeginInit();
             this.groupboxBase64.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +75,8 @@
             // 
             // imgOpen
             // 
-            this.imgOpen.FileName = "imgOpen";
+            this.imgOpen.Filter = "PNG Image|*.png|GIF Animation|*.gif|JPEG Image|*.jpg|JPEG Image|*.jpeg";
+            this.imgOpen.RestoreDirectory = true;
             // 
             // groupboxBase64
             // 
@@ -96,6 +97,14 @@
             this.groupboxBase64.TabIndex = 2;
             this.groupboxBase64.TabStop = false;
             this.groupboxBase64.Text = "Base64:";
+            // 
+            // txtBase64raw
+            // 
+            this.txtBase64raw.Location = new System.Drawing.Point(6, 32);
+            this.txtBase64raw.Name = "txtBase64raw";
+            this.txtBase64raw.ReadOnly = true;
+            this.txtBase64raw.Size = new System.Drawing.Size(321, 20);
+            this.txtBase64raw.TabIndex = 2;
             // 
             // label3
             // 
@@ -155,7 +164,7 @@
             this.btnCopyHtml5.TabIndex = 1;
             this.btnCopyHtml5.Text = "Copy";
             this.btnCopyHtml5.UseVisualStyleBackColor = true;
-            this.btnCopyHtml5.Click += new System.EventHandler(this.btnCopy_Click);
+            this.btnCopyHtml5.Click += new System.EventHandler(this.btnCopyHtml5_Click);
             // 
             // btnCopyPrefix
             // 
@@ -211,14 +220,6 @@
             this.txtUrl.Name = "txtUrl";
             this.txtUrl.Size = new System.Drawing.Size(230, 20);
             this.txtUrl.TabIndex = 4;
-            // 
-            // txtBase64raw
-            // 
-            this.txtBase64raw.Location = new System.Drawing.Point(6, 32);
-            this.txtBase64raw.Name = "txtBase64raw";
-            this.txtBase64raw.Size = new System.Drawing.Size(321, 20);
-            this.txtBase64raw.TabIndex = 2;
-            this.txtBase64raw.TextChanged += new System.EventHandler(this.txtBase64raw_TextChanged);
             // 
             // FrmMain
             // 
