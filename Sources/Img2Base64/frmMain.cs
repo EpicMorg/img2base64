@@ -119,5 +119,15 @@ namespace Img2Base64
                 Clipboard.SetText(txtBase64html5.Text);
             }
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Pre-release version 0.0.0.1\r\nBy STAM, EpicMorg 2016");
+        }
+
+        private void licenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Copyright EpicMorg 2016, Standart MIT License");
+        }
     }
 }

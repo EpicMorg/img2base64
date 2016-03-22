@@ -44,8 +44,14 @@
             this.rbFile = new System.Windows.Forms.RadioButton();
             this.rbUrl = new System.Windows.Forms.RadioButton();
             this.txtUrl = new System.Windows.Forms.TextBox();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.licenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.picPreview)).BeginInit();
             this.groupboxBase64.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // picPreview
@@ -54,9 +60,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picPreview.Location = new System.Drawing.Point(12, 12);
+            this.picPreview.Location = new System.Drawing.Point(12, 27);
             this.picPreview.Name = "picPreview";
-            this.picPreview.Size = new System.Drawing.Size(440, 237);
+            this.picPreview.Size = new System.Drawing.Size(440, 222);
             this.picPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPreview.TabIndex = 0;
             this.picPreview.TabStop = false;
@@ -221,6 +227,46 @@
             this.txtUrl.Size = new System.Drawing.Size(230, 20);
             this.txtUrl.TabIndex = 4;
             // 
+            // menuStrip
+            // 
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuStrip.Size = new System.Drawing.Size(464, 24);
+            this.menuStrip.TabIndex = 5;
+            this.menuStrip.Text = "menuStrip1";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.licenseToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // licenseToolStripMenuItem
+            // 
+            this.licenseToolStripMenuItem.Name = "licenseToolStripMenuItem";
+            this.licenseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.licenseToolStripMenuItem.Text = "License";
+            this.licenseToolStripMenuItem.Click += new System.EventHandler(this.licenseToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(110, 6);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,14 +278,18 @@
             this.Controls.Add(this.groupboxBase64);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.picPreview);
+            this.Controls.Add(this.menuStrip);
             this.DoubleBuffered = true;
+            this.MainMenuStrip = this.menuStrip;
             this.MinimumSize = new System.Drawing.Size(480, 480);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "img2Base64 converter by stam";
+            this.Text = "Img2Base64";
             ((System.ComponentModel.ISupportInitialize)(this.picPreview)).EndInit();
             this.groupboxBase64.ResumeLayout(false);
             this.groupboxBase64.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,6 +313,11 @@
         private System.Windows.Forms.Button btnCopyPrefix;
         private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.TextBox txtBase64raw;
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem licenseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }
 
