@@ -35,15 +35,12 @@
             this.licenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.picPreview = new System.Windows.Forms.PictureBox();
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.rbUrl = new System.Windows.Forms.RadioButton();
             this.rbFile = new System.Windows.Forms.RadioButton();
             this.groupboxBase64 = new System.Windows.Forms.GroupBox();
-            this.txtBase64html5 = new System.Windows.Forms.Label();
-            this.txtBase64prefix = new System.Windows.Forms.Label();
-            this.txtBase64raw = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,10 +49,10 @@
             this.btnCopyRaw = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
+            this.splitContainer.Panel1.SuspendLayout();
+            this.splitContainer.Panel2.SuspendLayout();
+            this.splitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPreview)).BeginInit();
             this.groupboxBase64.SuspendLayout();
             this.SuspendLayout();
@@ -105,28 +102,29 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // splitContainer1
+            // splitContainer
             // 
-            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.splitContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer.Location = new System.Drawing.Point(0, 24);
+            this.splitContainer.Name = "splitContainer";
+            this.splitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // splitContainer1.Panel1
+            // splitContainer.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.picPreview);
+            this.splitContainer.Panel1.Controls.Add(this.picPreview);
             // 
-            // splitContainer1.Panel2
+            // splitContainer.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.txtUrl);
-            this.splitContainer1.Panel2.Controls.Add(this.rbUrl);
-            this.splitContainer1.Panel2.Controls.Add(this.rbFile);
-            this.splitContainer1.Panel2.Controls.Add(this.groupboxBase64);
-            this.splitContainer1.Panel2.Controls.Add(this.btnLoad);
-            this.splitContainer1.Size = new System.Drawing.Size(464, 417);
-            this.splitContainer1.SplitterDistance = 210;
-            this.splitContainer1.TabIndex = 15;
+            this.splitContainer.Panel2.Controls.Add(this.txtUrl);
+            this.splitContainer.Panel2.Controls.Add(this.rbUrl);
+            this.splitContainer.Panel2.Controls.Add(this.rbFile);
+            this.splitContainer.Panel2.Controls.Add(this.groupboxBase64);
+            this.splitContainer.Panel2.Controls.Add(this.btnLoad);
+            this.splitContainer.Panel2MinSize = 200;
+            this.splitContainer.Size = new System.Drawing.Size(464, 417);
+            this.splitContainer.SplitterDistance = 210;
+            this.splitContainer.TabIndex = 15;
             // 
             // picPreview
             // 
@@ -178,9 +176,6 @@
             // 
             this.groupboxBase64.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupboxBase64.Controls.Add(this.txtBase64html5);
-            this.groupboxBase64.Controls.Add(this.txtBase64prefix);
-            this.groupboxBase64.Controls.Add(this.txtBase64raw);
             this.groupboxBase64.Controls.Add(this.label3);
             this.groupboxBase64.Controls.Add(this.label2);
             this.groupboxBase64.Controls.Add(this.label1);
@@ -193,28 +188,6 @@
             this.groupboxBase64.TabIndex = 21;
             this.groupboxBase64.TabStop = false;
             this.groupboxBase64.Text = "Base64:";
-            // 
-            // txtBase64html5
-            // 
-            this.txtBase64html5.AutoSize = true;
-            this.txtBase64html5.Location = new System.Drawing.Point(6, 110);
-            this.txtBase64html5.Name = "txtBase64html5";
-            this.txtBase64html5.Size = new System.Drawing.Size(0, 13);
-            this.txtBase64html5.TabIndex = 4;
-            // 
-            // txtBase64prefix
-            // 
-            this.txtBase64prefix.Location = new System.Drawing.Point(6, 71);
-            this.txtBase64prefix.Name = "txtBase64prefix";
-            this.txtBase64prefix.Size = new System.Drawing.Size(321, 20);
-            this.txtBase64prefix.TabIndex = 3;
-            // 
-            // txtBase64raw
-            // 
-            this.txtBase64raw.Location = new System.Drawing.Point(6, 32);
-            this.txtBase64raw.Name = "txtBase64raw";
-            this.txtBase64raw.Size = new System.Drawing.Size(321, 20);
-            this.txtBase64raw.TabIndex = 2;
             // 
             // label3
             // 
@@ -292,7 +265,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 441);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.splitContainer);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
@@ -302,11 +275,11 @@
             this.Text = "Img2Base64";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.splitContainer.Panel1.ResumeLayout(false);
+            this.splitContainer.Panel2.ResumeLayout(false);
+            this.splitContainer.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
+            this.splitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picPreview)).EndInit();
             this.groupboxBase64.ResumeLayout(false);
             this.groupboxBase64.PerformLayout();
@@ -322,7 +295,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainer;
         private System.Windows.Forms.PictureBox picPreview;
         private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.RadioButton rbUrl;
@@ -335,9 +308,6 @@
         private System.Windows.Forms.Button btnCopyPrefix;
         private System.Windows.Forms.Button btnCopyRaw;
         private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.Label txtBase64raw;
-        private System.Windows.Forms.Label txtBase64html5;
-        private System.Windows.Forms.Label txtBase64prefix;
     }
 }
 

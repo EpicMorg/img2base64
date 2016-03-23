@@ -46,10 +46,10 @@ namespace Img2Base64
                 base64prefix = $"data:image/{mime};base64,{base64}";
                 base64html5 = $"<img src=\"{base64prefix}\">";
 
-                var maxLength = 40;
-                txtBase64html5.Text = base64html5.Substring( 0,maxLength )+"...";
-                txtBase64prefix.Text = base64prefix.Substring(0, maxLength) + "...";
-                txtBase64raw.Text = base64raw.Substring(0, maxLength) + "...";
+                const int maxLength = 40;
+                //txtBase64html5.Text = base64html5.Substring( 0,maxLength )+"...";
+                //txtBase64prefix.Text = base64prefix.Substring(0, maxLength) + "...";
+                //txtBase64raw.Text = base64raw.Substring(0, maxLength) + "...";
             }
             catch
             {
@@ -60,7 +60,7 @@ namespace Img2Base64
         private void btnCopyPrefix_Click(object sender, EventArgs e) => CopyNotEmptyText(base64prefix);
         private void btnCopyHtml5_Click(object sender, EventArgs e) => CopyNotEmptyText(base64html5);
 
-        private void CopyNotEmptyText(string c)
+        private static void CopyNotEmptyText(string c)
         {
             if ( !string.IsNullOrWhiteSpace( c ) )
                 Clipboard.SetText( c );
