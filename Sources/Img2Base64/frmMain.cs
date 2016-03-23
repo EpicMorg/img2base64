@@ -46,8 +46,9 @@ namespace Img2Base64
                 base64prefix = $"data:image/{mime};base64,{base64}";
                 base64html5 = $"<img src=\"{base64prefix}\">";
 
-                const int maxLength = 40;
-                //txtBase64html5.Text = base64html5.Substring( 0,maxLength )+"...";
+                //const int maxLength = 40;
+                //string asd = base64html5.Substring( 0,40 )+ "...";
+                //txtBase64html5.Text = asd;
                 //txtBase64prefix.Text = base64prefix.Substring(0, maxLength) + "...";
                 //txtBase64raw.Text = base64raw.Substring(0, maxLength) + "...";
             }
@@ -64,6 +65,11 @@ namespace Img2Base64
         {
             if ( !string.IsNullOrWhiteSpace( c ) )
                 Clipboard.SetText( c );
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)

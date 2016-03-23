@@ -121,9 +121,9 @@
             this.splitContainer.Panel2.Controls.Add(this.rbFile);
             this.splitContainer.Panel2.Controls.Add(this.groupboxBase64);
             this.splitContainer.Panel2.Controls.Add(this.btnLoad);
-            this.splitContainer.Panel2MinSize = 200;
+            this.splitContainer.Panel2MinSize = 150;
             this.splitContainer.Size = new System.Drawing.Size(464, 417);
-            this.splitContainer.SplitterDistance = 210;
+            this.splitContainer.SplitterDistance = 262;
             this.splitContainer.TabIndex = 15;
             // 
             // picPreview
@@ -131,7 +131,7 @@
             this.picPreview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picPreview.Location = new System.Drawing.Point(0, 0);
             this.picPreview.Name = "picPreview";
-            this.picPreview.Size = new System.Drawing.Size(462, 208);
+            this.picPreview.Size = new System.Drawing.Size(462, 260);
             this.picPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPreview.TabIndex = 0;
             this.picPreview.TabStop = false;
@@ -141,7 +141,7 @@
             // 
             this.txtUrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUrl.Location = new System.Drawing.Point(221, 17);
+            this.txtUrl.Location = new System.Drawing.Point(221, 9);
             this.txtUrl.Name = "txtUrl";
             this.txtUrl.ReadOnly = true;
             this.txtUrl.Size = new System.Drawing.Size(230, 20);
@@ -152,7 +152,8 @@
             // 
             this.rbUrl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rbUrl.AutoSize = true;
-            this.rbUrl.Location = new System.Drawing.Point(165, 18);
+            this.rbUrl.Enabled = false;
+            this.rbUrl.Location = new System.Drawing.Point(165, 10);
             this.rbUrl.Name = "rbUrl";
             this.rbUrl.Size = new System.Drawing.Size(50, 17);
             this.rbUrl.TabIndex = 22;
@@ -164,7 +165,7 @@
             this.rbFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rbFile.AutoSize = true;
             this.rbFile.Checked = true;
-            this.rbFile.Location = new System.Drawing.Point(118, 18);
+            this.rbFile.Location = new System.Drawing.Point(118, 10);
             this.rbFile.Name = "rbFile";
             this.rbFile.Size = new System.Drawing.Size(41, 17);
             this.rbFile.TabIndex = 23;
@@ -182,9 +183,9 @@
             this.groupboxBase64.Controls.Add(this.btnCopyHtml5);
             this.groupboxBase64.Controls.Add(this.btnCopyPrefix);
             this.groupboxBase64.Controls.Add(this.btnCopyRaw);
-            this.groupboxBase64.Location = new System.Drawing.Point(11, 44);
+            this.groupboxBase64.Location = new System.Drawing.Point(11, 36);
             this.groupboxBase64.Name = "groupboxBase64";
-            this.groupboxBase64.Size = new System.Drawing.Size(440, 145);
+            this.groupboxBase64.Size = new System.Drawing.Size(440, 102);
             this.groupboxBase64.TabIndex = 21;
             this.groupboxBase64.TabStop = false;
             this.groupboxBase64.Text = "Base64:";
@@ -192,7 +193,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 94);
+            this.label3.Location = new System.Drawing.Point(6, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 1;
@@ -201,7 +202,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 55);
+            this.label2.Location = new System.Drawing.Point(6, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 1;
@@ -210,7 +211,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Location = new System.Drawing.Point(6, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 1;
@@ -219,7 +220,7 @@
             // btnCopyHtml5
             // 
             this.btnCopyHtml5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCopyHtml5.Location = new System.Drawing.Point(333, 108);
+            this.btnCopyHtml5.Location = new System.Drawing.Point(333, 73);
             this.btnCopyHtml5.Name = "btnCopyHtml5";
             this.btnCopyHtml5.Size = new System.Drawing.Size(101, 23);
             this.btnCopyHtml5.TabIndex = 1;
@@ -230,7 +231,7 @@
             // btnCopyPrefix
             // 
             this.btnCopyPrefix.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCopyPrefix.Location = new System.Drawing.Point(333, 69);
+            this.btnCopyPrefix.Location = new System.Drawing.Point(333, 44);
             this.btnCopyPrefix.Name = "btnCopyPrefix";
             this.btnCopyPrefix.Size = new System.Drawing.Size(101, 23);
             this.btnCopyPrefix.TabIndex = 1;
@@ -241,7 +242,7 @@
             // btnCopyRaw
             // 
             this.btnCopyRaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCopyRaw.Location = new System.Drawing.Point(333, 30);
+            this.btnCopyRaw.Location = new System.Drawing.Point(333, 15);
             this.btnCopyRaw.Name = "btnCopyRaw";
             this.btnCopyRaw.Size = new System.Drawing.Size(101, 23);
             this.btnCopyRaw.TabIndex = 1;
@@ -252,7 +253,7 @@
             // btnLoad
             // 
             this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLoad.Location = new System.Drawing.Point(11, 15);
+            this.btnLoad.Location = new System.Drawing.Point(11, 7);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(101, 23);
             this.btnLoad.TabIndex = 20;
@@ -267,12 +268,14 @@
             this.ClientSize = new System.Drawing.Size(464, 441);
             this.Controls.Add(this.splitContainer);
             this.Controls.Add(this.menuStrip);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.MinimumSize = new System.Drawing.Size(480, 480);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Img2Base64";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.splitContainer.Panel1.ResumeLayout(false);
