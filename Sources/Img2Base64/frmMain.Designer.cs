@@ -41,9 +41,9 @@
             this.rbUrl = new System.Windows.Forms.RadioButton();
             this.rbFile = new System.Windows.Forms.RadioButton();
             this.groupboxBase64 = new System.Windows.Forms.GroupBox();
-            this.txtBase64html5 = new System.Windows.Forms.TextBox();
-            this.txtBase64prefix = new System.Windows.Forms.TextBox();
-            this.txtBase64raw = new System.Windows.Forms.TextBox();
+            this.txtBase64html5 = new System.Windows.Forms.Label();
+            this.txtBase64prefix = new System.Windows.Forms.Label();
+            this.txtBase64raw = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -89,19 +89,19 @@
             // licenseToolStripMenuItem
             // 
             this.licenseToolStripMenuItem.Name = "licenseToolStripMenuItem";
-            this.licenseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.licenseToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.licenseToolStripMenuItem.Text = "License";
             this.licenseToolStripMenuItem.Click += new System.EventHandler(this.licenseToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(110, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -138,7 +138,6 @@
             this.picPreview.TabIndex = 0;
             this.picPreview.TabStop = false;
             this.picPreview.WaitOnLoad = true;
-            this.picPreview.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.picPreview_LoadCompleted);
             // 
             // txtUrl
             // 
@@ -197,17 +196,16 @@
             // 
             // txtBase64html5
             // 
+            this.txtBase64html5.AutoSize = true;
             this.txtBase64html5.Location = new System.Drawing.Point(6, 110);
             this.txtBase64html5.Name = "txtBase64html5";
-            this.txtBase64html5.ReadOnly = true;
-            this.txtBase64html5.Size = new System.Drawing.Size(321, 20);
+            this.txtBase64html5.Size = new System.Drawing.Size(0, 13);
             this.txtBase64html5.TabIndex = 4;
             // 
             // txtBase64prefix
             // 
             this.txtBase64prefix.Location = new System.Drawing.Point(6, 71);
             this.txtBase64prefix.Name = "txtBase64prefix";
-            this.txtBase64prefix.ReadOnly = true;
             this.txtBase64prefix.Size = new System.Drawing.Size(321, 20);
             this.txtBase64prefix.TabIndex = 3;
             // 
@@ -215,7 +213,6 @@
             // 
             this.txtBase64raw.Location = new System.Drawing.Point(6, 32);
             this.txtBase64raw.Name = "txtBase64raw";
-            this.txtBase64raw.ReadOnly = true;
             this.txtBase64raw.Size = new System.Drawing.Size(321, 20);
             this.txtBase64raw.TabIndex = 2;
             // 
@@ -338,9 +335,9 @@
         private System.Windows.Forms.Button btnCopyPrefix;
         private System.Windows.Forms.Button btnCopyRaw;
         private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.TextBox txtBase64raw;
-        private System.Windows.Forms.TextBox txtBase64html5;
-        private System.Windows.Forms.TextBox txtBase64prefix;
+        private System.Windows.Forms.Label txtBase64raw;
+        private System.Windows.Forms.Label txtBase64html5;
+        private System.Windows.Forms.Label txtBase64prefix;
     }
 }
 
